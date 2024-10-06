@@ -1,0 +1,137 @@
+*{
+    text-align: center;
+    align-items: center;
+}
+body{
+    border: 1px solid gray;
+    background-color: rgb(252, 252, 252);
+    overflow: hidden;
+}
+
+button:hover{
+    background-color: rgb(225, 225, 225);
+}
+textarea{
+    text-align: left;
+}
+
+header{
+    border: 1px solid gray;
+    font-size: 24px;
+}
+
+.main_container{
+    border: 1px solid gray;
+    display: flex;
+}
+/*ナビ*/
+nav{
+    border: 1px solid gray;
+    height: 200px;
+}
+
+/*検索部分*/
+.main_header{
+    border: 1px solid gray;
+    display: flex;
+    height: 60px;
+}
+button{
+    height: 30px;
+}
+/*コンテンツ部分*/
+.image-file{
+    border: 1px solid gray;
+    height: 200px;
+    min-width: 100px;
+}
+.image_area{
+    border: 1px solid gray;
+    overflow-y: scroll;
+    max-height: 600px;
+}
+
+/*画像拡大*/
+.background_area{
+    position: absolute;
+    flex-direction: column;
+    row-gap: 10px;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10000;
+
+    display: none;
+    justify-content: center;
+    /* align-items: center; */
+}
+#zoom_img{
+    position: relative;
+    /* top: -5%; */
+    max-width: 70%;
+    max-height: 80%;
+    /* width: 50%; */
+}
+/* .display_image_data_area{
+} */
+.display_image_data_area{
+    color: white;
+}
+.display_image_data_area *{
+    text-decoration: underline;
+}
+#display_date_area{
+    font-size: 4px;
+}
+.display_tag_list label a, .display_tag_list label a:visited, .display_url_list label a, .display_url_list label a:visited{
+    color: white;
+}
+.display_tag_list label, .display_url_list label{
+    cursor: pointer;
+    margin-right: 5px;
+}
+#comment_textarea{
+    margin-top: 10px;
+    text-decoration: none;
+}
+.edge{
+    position: absolute;
+    height: 100vh;
+    width: 10vw;
+    content: none;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+.edge:hover{
+    background-color: rgba(255, 255, 255, 0.145);
+}
+.left_edge{
+    left: 0;
+}
+.right_edge{
+    right: 0;
+}
+
+/* 下のとこ */
+.display_tag_url_area{
+    display: flex;
+    column-gap: 30px;
+}
+#display_selecting_images_num{
+    text-decoration: underline;
+}
+.display_tag_area, .display_url_area{
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+/* 削除確認画面 */
+.confirm_delete_window{
+    /* width: 30%; */
+    background-color: white;
+    border: 1px solid gray;
+}
+.selecting_image{
+    height: 100px;
+}

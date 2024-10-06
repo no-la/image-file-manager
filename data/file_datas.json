@@ -1,0 +1,17 @@
+{
+    "image": {
+        "files\\image\\obake.jpg": {
+            "name": "obake.jpg",
+            "tag": [
+                "青",
+                "イラスト",
+                "おばけ"
+            ],
+            "date": "2024-10-07",
+            "comment": "",
+            "url": [
+                "https://no-la.github.io/my-portfolio-for-2026/"
+            ]
+        }
+    }
+}

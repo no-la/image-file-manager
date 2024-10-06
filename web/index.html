@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>FileManager</title>
+</head>
+<body>
+    <!-- datalist -->
+    <datalist id="entire_tags_datalist"></datalist>
+    <header id="top">
+        <div class="header_title_area">ファイルにタグ付けして検索出来て嬉しいやつ</div>
+    </header>
+    <main id="main_container">
+        <!-- 画像の拡大表示 -->
+        <div class="zoom_area background_area" id="zoom_area">
+            <button class="left_edge edge" id="zoom_area_left_edge"></button>
+            <img id="zoom_img">
+            <button class="right_edge edge" id="zoom_area_right_edge"></button>
+            <div class="display_image_data_area">
+                <div id="display_file_name_area"></div>
+                <div id="display_date_area"></div>
+                <div>
+                    <div class="display_tag_list" id="display_tag_list"></div>
+                    <div class="display_url_list" id="display_url_list"></div>
+                    <textarea id="comment_textarea" cols="30" rows="4" placeholder="コメントを入力"></textarea>
+                </div>
+            </div>
+        </div>
+        <!-- ファイル削除の確認画面 -->
+        <div class="confirm_delete_area background_area" id="confirm_delete_area">
+            <div class="confirm_delete_window" id="confirm_delete_window">
+                <div class="display_selecting_image_area" id="display_selecting_image_area">
+                    
+                </div>
+                <div class="confirm_text">選択中の画像を削除します。</div>
+                <div class="confirm_button_area">
+                    <button id="confirm_ok_button">OK</button>
+                    <button id="confirm_cancel_button">CANCEL</button>
+                </div>
+            </div>
+        </div>
+        <div class="main_header">
+            <div class="search_area">
+                <input type="text" placeholder="検索" id="input_search_text" list="entire_tags_datalist">
+                <button id="send_search_button">検索</button>
+            </div>
+            <button class="mode_button" id="select_mode_button">画像選択</button>
+            <button class="delete_button" id="delete_button">削除</button>
+            <select id="sort_select">
+                <option value="date">日付順</option>
+                <option value="tag">タグ順</option>
+            </select>
+            <select id="sort_direction">
+                <option value="up">昇順</option>
+                <option value="down">降順</option>
+            </select>
+            <!-- <button class="add_tags_button" id="add_tags_button">タグを追加</button> -->
+        </div>
+        <section class="image_area" id="image_area">
+            <input type="range" class="image_size_slider" id="image_size_slider" min="50" max="500" value="200">
+            <div class="display_image_area" id="display_image_area">
+                
+            </div>
+        </section>
+        <nav class="global_nav_container">
+            <div class="display_selecting_images_area">
+                <div id="display_selecting_images_num">0件を選択中</div>
+            </div>
+            <div class="display_tag_url_area">
+                <div class="display_tag_area">
+                    <div class="tag_list" id="tag_list">
+                        <!-- <input type="checkbox" name="check1"><lable for="check1">check1</lable>
+                        <input type="checkbox" name="check2"><lable for="check2">check2</lable>
+                        <input type="checkbox" name="check3"><lable for="check3">check3</lable> -->
+                    </div>
+                    <div class="input_tag_area">
+                        <input type="text" id="input_tag" list="entire_tags_datalist" placeholder="タグを追加">
+                        <button class="send_tag_button" id="send_tag_button">追加</button>
+                        <button class="delete_tag_button" id="delete_tag_button">削除</button>
+                    </div>
+                    <div class="warning_text_area">
+                        <div class="warning_text" id="warning_text"></div>
+                    </div>
+                </div>
+                <div class="display_url_area">
+                    <div id="url_list" class="url_list">
+                    </div>
+                    <div class="input_url_area">
+                        <input type="text" id="input_url" placeholder="urlを追加">
+                        <button class="send_url_button" id="send_url_button">追加</button>
+                        <button class="delete_url_button" id="delete_url_button">削除</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </main>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+</body>
+</html>
